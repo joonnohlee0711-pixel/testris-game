@@ -1,4 +1,4 @@
-// Supabase 설정
+// Supabase 설정 - Vercel 환경 변수 또는 기본값 사용
 const SUPABASE_URL = 'https://qmhmrbvrrziesfdjanaf.supabase.co';
 const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFtaG1yYnZycnppZXNmZGphbmFmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Njk4Nzc0MjYsImV4cCI6MjA4NTQ1MzQyNn0.sLguWRwyeNtN8VMjwHHbrIGdF1vUmTjD8jwbfDU7xps';
 
