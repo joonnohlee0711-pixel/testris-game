@@ -1,0 +1,16 @@
+{
+  "name": "tetris-game",
+  "version": "1.0.0",
+  "description": "Tetris game with level system, Supabase leaderboard, and Vercel deployment",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "start": "npx serve ."
+  },
+  "keywords": ["tetris", "game", "supabase", "vercel"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.39.0"
+  }
+}

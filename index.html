@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테트리스 게임</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎮 테트리스</h1>
+        </header>
+
+        <div class="game-container">
+            <!-- 게임 정보 -->
+            <div class="info-panel">
+                <div class="score-box">
+                    <h3>점수</h3>
+                    <p id="score">0</p>
+                </div>
+                <div class="score-box">
+                    <h3>레벨</h3>
+                    <p id="level">1</p>
+                </div>
+                <div class="score-box">
+                    <h3>라인</h3>
+                    <p id="lines">0</p>
+                </div>
+                <div class="next-piece">
+                    <h3>다음 블록</h3>
+                    <canvas id="nextCanvas" width="120" height="120"></canvas>
+                </div>
+                <div class="controls-info">
+                    <h3>조작법</h3>
+                    <p>← → : 이동</p>
+                    <p>↑ ↓ : 회전</p>
+                    <p>Space : 즉시 낙하</p>
+                    <p>P : 일시정지</p>
+                </div>
+            </div>
+
+            <!-- 게임 보드 -->
+            <div class="game-board">
+                <canvas id="gameCanvas" width="300" height="600"></canvas>
+                <div id="gameOverlay" class="overlay hidden">
+                    <div class="overlay-content">
+                        <h2 id="overlayTitle">게임 시작</h2>
+                        <p id="overlayMessage">스페이스를 눌러 시작하세요</p>
+                        <button id="startButton" class="btn">게임 시작</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 리더보드 -->
+            <div class="leaderboard">
+                <h3>🏆 리더보드</h3>
+                <div id="leaderboardList" class="leaderboard-list">
+                    <p class="loading">로딩 중...</p>
+                </div>
+                <button id="refreshLeaderboard" class="btn btn-small">새로고침</button>
+            </div>
+        </div>
+
+        <!-- 점수 입력 모달 -->
+        <div id="scoreModal" class="modal hidden">
+            <div class="modal-content">
+                <h2>게임 오버!</h2>
+                <p class="final-score">점수: <span id="finalScore">0</span></p>
+                <p class="final-stats">레벨: <span id="finalLevel">1</span> | 라인: <span id="finalLines">0</span></p>
+                <input type="text" id="playerName" placeholder="이름을 입력하세요" maxlength="20">
+                <div class="modal-buttons">
+                    <button id="submitScore" class="btn">점수 저장</button>
+                    <button id="skipScore" class="btn btn-secondary">건너뛰기</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase-client.js"></script>
+</body>
+</html>
